@@ -16,25 +16,23 @@ public class IdentifyingWood
 		int s_len=s.length();
 		for(int t_ind=0; t_ind<=t.length()-1; t_ind++)
 		{
-			if(s_ind>s_len)
+						
+			while(s_ind<s_len && s.charAt(s_ind)!=t.charAt(t_ind))
 			{
-				substr_flag=false;
-				break;
+				s_ind++;
 			}
-			String curr_char=""+t.charAt(t_ind)	;
-			int curr_ind=s.indexOf(curr_char, s_ind);
-		
-			if(curr_ind==-1)
+			if(s_ind>=s_len)
 			{
 				substr_flag=false;
 				break;
 			}
 			else
 			{
-				s_ind=curr_ind+1;
+				s_ind++;
 			}
 			
-		}
+		}	
+		
 		if(substr_flag==true)
 				return "Yep, it's wood.";
 		else
