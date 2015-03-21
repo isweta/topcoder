@@ -5,14 +5,14 @@ public class FoxAndWord
 
 	public static void main(String args[])
 	{
-		String ar[]={"tokyo", "kyoto"};
+		String ar[]={"aaaaa", "bbbbb"};
 		System.out.println(howManyPairs(ar));
 	}	
 
 	public static int howManyPairs(String[] words)
 	{
 		int pair_count=0;
-		for(int curr_wd_ind=0; curr_wd_ind<words.length; curr_wd_ind++)
+		for(int curr_wd_ind=0; curr_wd_ind<words.length-1; curr_wd_ind++)
 		{
 			String curr_wd=words[curr_wd_ind];
 			for(int pair_wd_ind=curr_wd_ind+1; pair_wd_ind<words.length; pair_wd_ind++)
